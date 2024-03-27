@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header
+      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+    >
+      <a
+        href="#"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+      >
+        <span class="fs-3">KynDox</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a
+            href="https://www.facebook.com/people/Teco-Deportes/100092847684566/"
+            class="nav-link active"
+            >Like y Siguenos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://api.whatsapp.com/send?phone=+50583347188&text=Hola, amorchito xD."
+            class="nav-link"
+            >WhatsApp</a
+          >
+        </li>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a
+                href="https://github.com/Ateokyn?tab=repositories"
+                class="nav-link"
+                >Repositorio</a
+              >
+            </li>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a
+                    href="https://www.y2meta.net/es"
+                    class="nav-link"
+                    >Y2META</a
+                  >
+                </li>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a
+                        href="https://chat.openai.com/"
+                        class="nav-link"
+                        >ChatGPT</a
+                      >
+                    </li>
+      </ul>
+
+
+    </header>
+
+    <div class="container">
+      <main>
+        <h4 class="mb-3 mt-2">Registro de Usuario</h4>
+        <form
+          action="https://formsubmit.co/tellezkenny08@gmail.com"
+          method="POST"
+          novalidate
+          class="needs-validation"
+        >
+          <div class="row g-3">
+            <!-- Nombres y Apellidos -->
+
+            <div class="col-lg-5">
+              <label for="nombresUsuario" class="form-label">Nombres</label>
+              <input
+                name="Nombres-Usuario"
+                type="text"
+                class="form-control"
+                id="nombresUsuario"
+                placeholder="Ingrese sus nombres"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">Debe ingresar sus nombres. 😾</div>
+            </div>
+
+            <div class="col-lg-5">
+              <label for="apellidosUsuario" class="form-label">Apellidos</label>
+              <input
+                name="Apellidos-Usuario"
+                type="text"
+                class="form-control"
+                id="apellidosUsuario"
+                placeholder="Ingrese sus apellidos"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">
+                Debe ingresar sus apellidos. 😾
+              </div>
+            </div>
+
+            <!-- Imagen Perfil-->
+
+            <div class="form-group">
+              <label for="imagen">Imagen</label>
+              <div class="custom-file">
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="imagen"
+                  name="imagen"
+                />
+                <label class="custom-file-label" for="imagen"
+                  >Seleccionar archivo</label
+                >
+              </div>
+              <img
+                id="imagen-preview"
+                src=""
+                class="img-thumbnail mt-2"
+                style="width: 200px"
+              />
+            </div>
+
+            <script>
+              const imagenInput = document.getElementById("imagen");
+              const imagenPreview = document.getElementById("imagen-preview");
+
+              imagenInput.addEventListener("change", () => {
+                const reader = new FileReader();
+                reader.onload = () => {
+                  imagenPreview.src = reader.result;
+                };
+                reader.readAsDataURL(imagenInput.files[0]);
+              });
+            </script>
+
+            <!-- Correo Electronico -->
+
+            <div class="col-lg-5">
+              <label for="correoElectronico" class="form-label"
+                >Correo Electronico</label
+              >
+              <input
+                name="Correo-Electronico"
+                type="text"
+                class="form-control"
+                id="correoElectronico"
+                placeholder="Ingrese su correo electronico"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">
+                Debe ingresar su correo electronico. 😾
+              </div>
+            </div>
+
+            <!-- Telefono -->
+
+            <div class="col-lg-5">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input
+                name="Telefono"
+                type="number"
+                class="form-control"
+                id="telefono"
+                placeholder="Ingrese su teléfono"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">Debe ingresar su teléfono. 😾</div>
+            </div>
+
+            <!-- Fecha nacimiento -->
+
+            <div class="col-lg-5">
+              <label for="fechaNacimiento" class="form-label"
+                >Fecha nacimiento</label
+              >
+              <input
+                name="Fecha-Nacimiento"
+                type="date"
+                class="form-control"
+                id="fechaNacimiento"
+                placeholder="Ingresar fecha nacimiento"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">
+                Debe ingresar su fecha nacimiento. 😾
+              </div>
+            </div>
+
+            <!-- Género -->
+
+            <div class="col-lg-5">
+              <label for="genero">Género</label>
+              <select class="form-select" id="genero" name="genero">
+                <option>Seleccione</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+              </select>
+            </div>
+
+            <!-- Ciudad -->
+
+            <div class="col-lg-5">
+              <label for="ciudad" class="form-label">Ciudad</label>
+              <input
+                name="Ciudad"
+                type="text"
+                class="form-control"
+                id="ciudad"
+                placeholder="Ingrese su ciudad"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">Debe ingresar su ciudad. 😾</div>
+            </div>
+
+            <!-- Pais -->
+
+            <div class="col-lg-5">
+              <label for="pais" class="form-label">Pais</label>
+              <input
+                name="Pais"
+                type="text"
+                class="form-control"
+                id="pais"
+                placeholder="Ingrese su pais"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">Debe ingresar su pais. 😾</div>
+            </div>
+
+            <!-- Ocupación -->
+
+            <div class="col-lg-5">
+              <label for="Ocupacion" class="form-label">Ocupación</label>
+              <input
+                name="ocupacion"
+                type="text"
+                class="form-control"
+                id="ocupacion"
+                placeholder="Ingrese su ocupación"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">Debe ingresar su ocupación. 😾</div>
+            </div>
+
+            <!-- Intereses -->
+
+            <div class="col-lg-5">
+              <label for="intereses" class="form-label">Intereses</label>
+              <textarea
+                name="Intereses"
+                class="form-control"
+                id="intereses"
+                placeholder="Ingrese sus intereses"
+                required
+              ></textarea>
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">
+                Debe ingresar sus intereses. 😾
+              </div>
+            </div>
+
+            <!-- Dispositivos -->
+
+            <div class="col-lg-5">
+              <label for="dispositivos">Dispositivos</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="movil"
+                  id="movil"
+                  name="movil"
+                />
+                <label class="form-check-label" for="movil"> Movil </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="laptop"
+                  id="laptop"
+                  name="laptop"
+                />
+                <label class="form-check-label" for="laptop"> Laptop </label>
+              </div>
+            </div>
+
+            <!-- Estado -->
+
+            <div class="col-lg-5">
+              <label for="estado">Estado</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  value="soltero"
+                  id="soltero"
+                  name="estado"
+                />
+                <label class="form-check-label" for="soltero"> Soltero </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  value="casado"
+                  id="casado"
+                  name="estado"
+                />
+                <label class="form-check-label" for="casado"> Casado </label>
+              </div>
+            </div>
+
+            <!-- Hermanos -->
+
+            <div class="col-lg-5">
+              <label for="cantidadHermanos" class="form-label">Hermanos</label>
+              <input
+                name="Cantidad-Hermanos"
+                type="number"
+                class="form-control"
+                id="cantidadHermanos"
+                placeholder="Cantidad de hermanos"
+                required
+              />
+              <div class="valid-feedback">¡Correcto! 😸</div>
+              <div class="invalid-feedback">
+                Debe ingresar cantidad de hermanos. 😾
+              </div>
+            </div>
+
+            <!-- Economia -->
+
+            <div class="col-lg-5">
+              <label for="salud">Estado Economico</label>
+              <select class="form-select" id="economia" name="economia">
+                <option>Seleccione</option>
+                <option value="mal">Mal</option>
+                <option value="bien">Bien</option>
+              </select>
+            </div>
+
+            <hr class="my-4" />
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg"
+              onclick="enviarPerfil()"
+            >
+              Enviar Perfil
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script>
+      (() => {
+        "use strict";
+
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@1.3.4/jspdf.min.js"></script>
+  </body>
+</html>
